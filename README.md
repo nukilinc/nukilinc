@@ -7,7 +7,6 @@
 
 #include <iostream>
 #include <stdlib.h> /* atoi -> char * parametreyi int turune donusturmek icin kullanilacak */
-#include "hw01_functions.h"
 
 using namespace std;
 
@@ -20,9 +19,8 @@ Bu sabitler programinin okunulabilirligini arttirmaya yariyor.*/
 /*Bu fonksiyon ekrana yıldızlardan oluşan bir üçgen yazar.
 Fonksiyon sadece [3, 15] aralığındaki tek sayılarda çalışır.
 Uygun parametre gönderilmezse ekrana hiçbir şey yazdırmadan çıkar.*/
-void duzUcgen( int deger ){
-	
-	// Bu kismi fonksiyon tanimina uygun bicimde duzenleyiniz.
+void duzUcgen( int deger )
+{
     int i, j;
     int yildizSayisi = 0;
     int boslukSayisi = deger - 1;
@@ -36,12 +34,12 @@ void duzUcgen( int deger ){
         /* İkinci For ile boşluk yazdırılır */
              for(j=0; j<boslukSayisi; j++){
                  cout << " "; 
-			 }  
+	     }  
 
              /* Üçüncü For ise Ekrana Yildiz yazdirir */
              for(j=0; j <= yildizSayisi; j++){
                   cout << "*"; 
-			  }          
+	     }          
 
         /* Her Yildiz yazdırma işleminden sonra aşağı inilir */
            cout << endl;               
@@ -52,16 +50,15 @@ void duzUcgen( int deger ){
         /* Her aşağı indildiğinde Boşluk sayısının 1 azalması lazım */
            boslukSayisi--;
         
-        }
+       }
     }
 }
 
 /* Bu fonksiyon ekrana yıldızlardan oluşan ters bir üçgen yazar.
 Fonksiyon sadece[3, 15] aralığındaki tek sayılarda çalışır.
 Uygun parametre gönderilmezse ekrana hiçbir şey yazdırmadan çıkar. */
-void tersUcgen(int deger){
-	
-   // Bu kismi fonksiyon tanimina uygun bicimde duzenleyiniz.
+void tersUcgen(int deger)
+{
    int i, j;
    int yildizSayisi=deger-1;
    int boslukSayisi = deger - 1;
@@ -70,18 +67,18 @@ void tersUcgen(int deger){
   
    if( ( deger >= 3 ) && ( deger <= 15 ) && ( deger % 2 != 0) ){
 	   
-	    /* İlk For satır sayısını yazdırır (üçgenin boyu) */
+	 /* İlk For satır sayısını yazdırır (üçgenin boyu) */
         for( i=0; i < ( deger + 1 ) / 2; i++ ){        
 
              /* İkinci For ile boşluk yazdırılır */
             for( j=0; j < boslukSayisi; j++ ){
                 cout << " ";  
-			} 
+		} 
 
             /* Üçüncü For ise Ekrana Yildiz yazdirir */
             for( j=0; j <= yildizSayisi; j++ ){
                 cout <<"*";           
-			}
+		}
 
         /* Her Yildiz yazdırma işleminden sonra aşağı inilir */
            cout << endl;               
